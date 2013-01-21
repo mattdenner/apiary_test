@@ -53,7 +53,6 @@ GET /
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "search": {
     "actions": {
@@ -88,9 +87,6 @@ GET /00000000-1111-0000-0000-000000000001
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
-< Access-Control-Allow-Methods: OPTIONS,GET
-< Access-Control-Allow-Headers: Accept
 
 {
   "tube": {
@@ -130,10 +126,6 @@ POST /search/first
   }
 }
 < 302
-< Access-Control-Allow-Origin: *
-< Access-Control-Allow-Methods: OPTIONS, POST, GET
-< Access-Control-Allow-Headers: Content-Type, Accept
-< Access-Control-Expose-Headers: Content-Type, Location
 < Location: http://mattdenner.apiary.io/00000000-1111-0000-0000-000000000001
 
 
@@ -154,7 +146,6 @@ POST /search/first
 }
 < 404
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "error": {
     "message": "Barcode SRC654321 does not appear to exist"
@@ -189,7 +180,6 @@ POST /search/all
 }
 < 201
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "actions": {
     "read": "/11111111-0000-0000-0000-000000000000",
@@ -225,7 +215,6 @@ POST /tubes
 > Accept: application/json
 < 201
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 < Location: /00000000-1111-0000-0000-000000000002
 {
   "tube": {
@@ -256,7 +245,6 @@ POST /00000000-1111-0000-0000-000000000002/change_state
 }
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
@@ -292,7 +280,6 @@ POST /00000000-1111-0000-0000-000000000001/transfer
 }
 < 201
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "transfer": {
     "source": {
@@ -331,7 +318,6 @@ GET /00000000-1111-0000-0000-000000000002
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
@@ -352,7 +338,6 @@ GET /00000000-1111-0000-0000-000000000003
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
@@ -373,7 +358,6 @@ GET /00000000-1111-0000-0000-000000000004
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
@@ -394,7 +378,6 @@ GET /00000000-1111-0000-0000-000000000005
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
@@ -417,7 +400,6 @@ GET /00000000-1111-0000-0000-000000000006
 > Accept: application/json
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
@@ -446,7 +428,6 @@ POST /00000000-1111-0000-0000-000000000005/change_state
 }
 < 200
 < Content-Type: application/json
-< Access-Control-Allow-Origin: *
 {
   "tube": {
     "actions": {
