@@ -89,7 +89,6 @@ GET /00000000-1111-0000-0000-000000000001
 < 200
 < Content-Type: application/json
 < Access-Control-Allow-Origin: *
-< X-Foo: "BAR!"
 {
   "tube": {
     "actions": {
@@ -128,6 +127,7 @@ POST /search/first
   }
 }
 < 301
+< Access-Control-Allow-Origin: *
 < Location: /00000000-1111-0000-0000-000000000001
 
 
