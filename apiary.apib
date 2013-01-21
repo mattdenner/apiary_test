@@ -495,8 +495,8 @@ OPTIONS /00000000-1111-0000-0000-000000000001
 < 200
 < Allow: OPTIONS,GET
 < Access-Control-Allow-Origin: *
-< Access-Control-Allow-Methods: OPTIONS,GET
-< Access-Control-Allow-Headers: Accept
+< Access-Control-Allow-Methods: OPTIONS, GET
+< Access-Control-Allow-Headers: Accept, x-request-start
 
 
 --
@@ -505,7 +505,7 @@ OPTIONS /search/first
 < 200
 < Allow: OPTIONS,POST
 < Access-Control-Allow-Origin: *
-< Access-Control-Allow-Methods: OPTIONS,POST
-< Access-Control-Allow-Headers: Content-Type,Accept,Referer,User-Agent,Content-Length
-< Access-Control-Expose-Headers: Content-Type,Location
+< Access-Control-Allow-Methods: OPTIONS, POST
+< Access-Control-Allow-Headers: Content-Type, Accept, Referer, User-Agent, Content-Length, x-request-start
+< Access-Control-Expose-Headers: Content-Type, Location
 
