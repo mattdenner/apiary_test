@@ -120,7 +120,7 @@ application will know that the result is a tube, not a plate.
 would be implemented with a 301 permanent redirection, we have chosen, for the purposes of this test, to use 200 OK response, with the
 body hold the response data.  A `Location` header is included to detail where the real resource can be found.
 --
-PUT /search/first
+POST /search/first
 > Accept: application/json
 > Content-Type: application/json
 {
