@@ -116,10 +116,11 @@ that can be searched for by barcode, like plates, hence the returned resource co
 this search a physical item must have been scanned, which means that the user interface is likely to say "Scan tube" and therefore the
 application will know that the result is a tube, not a plate.
 
-**NOTE:** CORS implementations in browsers appear to be broken so we have changed this from the redirection, to a normal 200 OK response,
-with the body included.  Extra points if you can fix this so a redirect would work!
+**NOTE:** When performing an HTTP POST, using CORS, that results in an HTTP redirection, browsers appear to fail silently.  Where this
+would be implemented with a 301 permanent redirection, we have chosen, for the purposes of this test, to use 200 OK response, with the
+body hold the response data.  A `Location` header is included to detail where the real resource can be found.
 --
-POST /search/first
+PUT /search/first
 > Accept: application/json
 > Content-Type: application/json
 {
@@ -129,7 +130,6 @@ POST /search/first
 }
 < 200
 < Content-Type: application/json
-< Location: http://mattdenner.apiary.io/00000000-1111-0000-0000-000000000001
 {
   "tube": {
     "actions": {
